@@ -25,18 +25,18 @@ socket.on('chat', function(userid, username, _time, message){
   }
  
 var getTimeAgo = function(originTime){
-  var timeDifference = date.now-originTime;
+  var timeDifference = Date.now-originTime;
 	if(timeDifference>60){
 		if(timeDifference>3600){
 			(return timeDifference/3600 % 3600).toFixed(0) + “hours”;
-		};
+		}
 		else{
 			(return timeDifference/60 % 60).toFixed(0) + “minutes”;
-		};
+		}
 	}
 	else{
 		return timeDifference.toFixed(0)+"seconds";
-	};
-};
+	}
+}
  
   setInterval(updateTimeStamps, 15000);
